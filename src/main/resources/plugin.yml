@@ -1,4 +1,0 @@
-name: LabsCore
-version: '${version}'
-main: cz.darklabs.labscore.LabsCore
-api-version: '1.20'
