@@ -1,5 +1,4 @@
-[![Release](https://jitpack.io/v/DRKLBS/LabsCore.svg)]
-(https://jitpack.io/#DRKLBS/LabsCore)
+[![Release](https://jitpack.io/v/DRKLBS/LabsCore.svg)](https://jitpack.io/#DRKLBS/LabsCore)
 
 Create your plugins lightning fast with LabsCore API, save all your time and focus on the main logic of your plugin. We provide a lot of useful features and utilities to make your life easier.
 
