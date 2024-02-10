@@ -1,4 +1,5 @@
 Create your plugins lightning fast with LabsCore API, save all your time and focus on the main logic of your plugin. We provide a lot of useful features and utilities to make your life easier.
+
 Some of the features we provide:
 - Easily manage and create GUIs menus
 - Create and manage custom items and entities
@@ -11,7 +12,7 @@ Some of the features we provide:
 3. Change **OnEnable** to **onCoreEnable** and **OnDisable** to **onCoreDisable** (We occupy these methods to perform basic logic)
 # Importing Core API
 Do not forget to replace **VERSION** with the latest version of the API
-You can find the latest version [here](https://github.com/DRKLBS/LabsCore/releases)
+You can find the latest version [here](https://github.com/DRKLBS/LabsCore/releases),
 or just use the latest version tag **main-SNAPSHOT**
 ## Maven
 ```xml
