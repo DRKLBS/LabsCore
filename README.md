@@ -12,6 +12,7 @@ Some of the features we provide:
 # Importing Core API
 Do not forget to replace **VERSION** with the latest version of the API
 You can find the latest version [here](https://github.com/DRKLBS/LabsCore/releases)
+or just use the latest version tag **main-SNAPSHOT**
 ## Maven
 ```xml
 <repository>
