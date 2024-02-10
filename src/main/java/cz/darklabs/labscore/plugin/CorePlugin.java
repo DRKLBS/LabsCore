@@ -100,14 +100,14 @@ public abstract class CorePlugin extends JavaPlugin implements Listener {
 	public void onEnable() {
 		CommandAPI.onEnable();
 
-		this.onCoreStart();
+		this.onCoreEnable();
 	}
 
 	@Override
 	public void onDisable() {
 		CommandAPI.onDisable();
 
-		this.onCoreStop();
+		this.onCoreDisable();
 	}
 
 	/**
@@ -144,12 +144,12 @@ public abstract class CorePlugin extends JavaPlugin implements Listener {
 	/**
 	 * The main loading method, called when we are ready to load
 	 */
-	protected abstract void onCoreStart();
+	protected abstract void onCoreEnable();
 
 	/**
 	 * The main method called when we are about to shut down
 	 */
-	protected void onCoreStop() {
+	protected void onCoreDisable() {
 	}
 
 	/**
