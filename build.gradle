@@ -16,7 +16,6 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
-    maven { url = "https://repo.codemc.org/repository/maven-public/" }
 }
 
 dependencies {
@@ -25,9 +24,6 @@ dependencies {
 
     annotationProcessor "dev.jorel:commandapi-annotations:9.3.0"
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
-
-    implementation "dev.jorel:commandapi-annotations:9.3.0"
-    implementation  "dev.jorel:commandapi-bukkit-shade:9.3.0"
 
     testCompileOnly 'org.projectlombok:lombok:1.18.30'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
@@ -49,22 +45,6 @@ tasks.withType(JavaCompile).configureEach {
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
         options.release.set(targetJavaVersion)
     }
-}
-
-shadowJar {
-    archiveFileName = "${project.name}-${project.version}.jar"
-
-    // Relocate the packages
-    relocate("dev.jorel.commandapi", "cz.darklabs.labscore.commandapi")
-
-    // Shade the CommandAPI dependencies into the shadow jar
-    dependencies {
-        include dependency("dev.jorel:commandapi-bukkit-shade:9.3.0")
-        include dependency("dev.jorel:commandapi-annotations:9.3.0")
-    }
-
-    // Shade annotations into the shadow jar as well
-    mergeServiceFiles()
 }
 
 tasks.build.dependsOn('shadowJar')
