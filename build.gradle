@@ -57,12 +57,10 @@ shadowJar {
     // Relocate the packages
     relocate("dev.jorel.commandapi", "cz.darklabs.labscore.commandapi")
 
-    // Exclude the relocation of commandAPI annotations
-    exclude('dev.jorel.commandapi.annotations')
-
     // Shade the CommandAPI dependencies into the shadow jar
     dependencies {
         include dependency("dev.jorel:commandapi-bukkit-shade:9.2.0")
+        include dependency("dev.jorel:commandapi-annotations:9.2.0")
     }
 }
 
