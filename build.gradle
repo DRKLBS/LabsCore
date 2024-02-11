@@ -52,6 +52,8 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 shadowJar {
+    archiveFileName = "${project.name}-${project.version}.jar"
+
     // Relocate the packages
     relocate("dev.jorel.commandapi", "cz.darklabs.labscore.commandapi")
 
