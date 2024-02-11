@@ -1,7 +1,5 @@
 package cz.darklabs.labscore.plugin;
 
-import dev.jorel.commandapi.CommandAPI;
-import dev.jorel.commandapi.CommandAPIBukkitConfig;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
@@ -91,21 +89,17 @@ public abstract class CorePlugin extends JavaPlugin implements Listener {
 		source = instance.getFile();
 		data = instance.getDataFolder();
 
-		CommandAPI.onLoad(new CommandAPIBukkitConfig(this).verboseOutput(true)); // Load with verbose output
-
 		this.onCoreLoad();
 	}
 
 	@Override
 	public void onEnable() {
-		CommandAPI.onEnable();
 
 		this.onCoreEnable();
 	}
 
 	@Override
 	public void onDisable() {
-		CommandAPI.onDisable();
 
 		this.onCoreDisable();
 	}
