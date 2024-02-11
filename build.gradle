@@ -63,3 +63,5 @@ shadowJar {
         include dependency("dev.jorel:commandapi-bukkit-shade:9.2.0")
     }
 }
+
+tasks.build.dependsOn('shadowJar')
