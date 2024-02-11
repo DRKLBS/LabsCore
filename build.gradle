@@ -3,7 +3,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
-group = 'com.github.DRKLBS'
+group = 'cz.darklabs'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -57,5 +57,10 @@ shadowJar {
     }
 
     // TODO: Change this to my own package name
-    relocate("dev.jorel.commandapi", "com.github.DRKLBS.labscore.commandapi")
+    relocate("dev.jorel.commandapi", "cz.darklabs.labscore.commandapi")
+}
+
+jar {
+    dependsOn shadowJar
+    from shadowJar
 }
